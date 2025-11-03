@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Suwisa Aitha — Portfolio</title>
 
-  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
   <script>
     tailwind.config = {
       darkMode: "class",
@@ -19,55 +17,36 @@
             "background-light": "#f6f6f8",
             "background-dark": "#111321",
           },
-          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"] },
           borderRadius: { xl: "0.75rem", "2xl": "1rem" },
           boxShadow: { soft: "0 6px 24px rgba(0,0,0,.08)" }
         }
       }
     };
   </script>
-  <style>
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-  </style>
+  <style>body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif}</style>
 </head>
-<div style="text-align:center; margin-top:30px;">
-  <img src="images/SW.jpg" alt="Suwisa Aitha" width="300" style="border-radius:15px;">
-  <h2 style="font-family:Inter, sans-serif; font-weight:bold; margin-top:10px;">Suwisa Aitha</h2>
-  <p>Master’s Student in Electrical Engineering – George Mason University</p>
-</div>
 
 <body class="bg-background-light text-[#111618] dark:bg-background-dark dark:text-white">
+  <!-- Intro photo block (now inside <body>) -->
+  <div style="text-align:center; margin-top:30px;">
+    <img src="images/SW.jpg" alt="Suwisa Aitha" width="300" style="border-radius:15px;">
+    <h2 style="font-weight:bold; margin-top:10px;">Suwisa Aitha</h2>
+    <p>Master’s Student in Electrical Engineering – George Mason University</p>
+  </div>
+
   <!-- Sticky Nav -->
   <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30 border-b border-black/5 dark:border-white/10">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="flex h-14 items-center justify-between">
-        <a href="#home" class="font-black tracking-tight">Suwisa Aitha</a>
-        <nav class="hidden gap-8 md:flex text-sm font-semibold">
-          <a href="#about" class="hover:text-primary">About</a>
-          <a href="#education" class="hover:text-primary">Education</a>
-          <a href="#projects" class="hover:text-primary">Projects</a>
-          <a href="#experience" class="hover:text-primary">Experience</a>
-          <a href="#skills" class="hover:text-primary">Skills</a>
-          <a href="#contact" class="hover:text-primary">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <a href="Suwisa_Aitha_Resume.pdf" class="hidden sm:inline-flex rounded-xl bg-primary px-4 py-2 text-white text-sm font-bold hover:bg-primary/90" download>
-            Download Resume
-          </a>
-          <button id="themeToggle" aria-label="Toggle dark mode" class="rounded-xl border border-black/10 dark:border-white/10 px-3 py-2 text-sm">
-            Toggle Theme
-          </button>
-        </div>
-      </div>
-    </div>
+    ...
   </header>
 
   <!-- Hero -->
   <section id="home" class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="grid gap-8 py-12 md:grid-cols-[280px,1fr] md:py-16">
       <div class="flex items-start justify-center md:justify-start">
-        <img src="images/me.jpg" alt="Portrait of Suwisa Aitha" class="h-[280px] w-[280px] rounded-2xl object-cover shadow-soft ring-1 ring-black/5 dark:ring-white/10">
-      </div>
+        <!-- Use SW.jpg here too (or actually upload me.jpg) -->
+        <img src="images/SW.jpg" alt="Portrait of Suwisa Aitha"
+             class="h-[280px] w-[280px] rounded-2xl object-cover shadow-soft ring-1 ring-black/5 dark:ring-white/10">
       <div class="flex flex-col justify-center">
         <h1 class="text-4xl font-black leading-tight tracking-tight sm:text-5xl">
           Electrical Engineering (M.S.) — Power Systems & Smart Grids
