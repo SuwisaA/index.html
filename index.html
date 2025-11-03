@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suwisa Aitha — Portfolio</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1628a0",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111321",
+          },
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          borderRadius: { xl: "0.75rem", "2xl": "1rem" },
+          boxShadow: { soft: "0 6px 24px rgba(0,0,0,.08)" }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  </style>
+</head>
+
+<body class="bg-background-light text-[#111618] dark:bg-background-dark dark:text-white">
+  <!-- Sticky Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30 border-b border-black/5 dark:border-white/10">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="flex h-14 items-center justify-between">
+        <a href="#home" class="font-black tracking-tight">Suwisa Aitha</a>
+        <nav class="hidden gap-8 md:flex text-sm font-semibold">
+          <a href="#about" class="hover:text-primary">About</a>
+          <a href="#education" class="hover:text-primary">Education</a>
+          <a href="#projects" class="hover:text-primary">Projects</a>
+          <a href="#experience" class="hover:text-primary">Experience</a>
+          <a href="#skills" class="hover:text-primary">Skills</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="Suwisa_Aitha_Resume.pdf" class="hidden sm:inline-flex rounded-xl bg-primary px-4 py-2 text-white text-sm font-bold hover:bg-primary/90" download>
+            Download Resume
+          </a>
+          <button id="themeToggle" aria-label="Toggle dark mode" class="rounded-xl border border-black/10 dark:border-white/10 px-3 py-2 text-sm">
+            Toggle Theme
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid gap-8 py-12 md:grid-cols-[280px,1fr] md:py-16">
+      <div class="flex items-start justify-center md:justify-start">
+        <img src="images/me.jpg" alt="Portrait of Suwisa Aitha" class="h-[280px] w-[280px] rounded-2xl object-cover shadow-soft ring-1 ring-black/5 dark:ring-white/10">
+      </div>
+      <div class="flex flex-col justify-center">
+        <h1 class="text-4xl font-black leading-tight tracking-tight sm:text-5xl">
+          Electrical Engineering (M.S.) — Power Systems & Smart Grids
+        </h1>
+        <p class="mt-4 text-base leading-relaxed text-black/70 dark:text-white/80">
+          Passionate about integrating technical innovation with sustainability to deliver solutions that support the environment.
+          Strong foundation in power system analysis & design, protection, and research. Experienced with IoT-based embedded systems and cross-disciplinary collaboration. Open to relocate.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 text-sm">
+          <a href="mailto:suwisa.aitha@gmail.com" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">suwisa.aitha@gmail.com</a>
+          <a href="tel:+17032869602" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">(703) 286-9602</a>
+          <a href="https://www.linkedin.com/in/suwisa-aitha/" target="_blank" rel="noopener" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">LinkedIn</a>
+          <span class="rounded-xl border border-black/10 px-4 py-2 dark:border-white/15">Annandale, VA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Summary</h2>
+    <p class="mt-4 leading-relaxed text-black/70 dark:text-white/80">
+      M.S. student in Electrical Engineering (in progress) with a concentration in Power Systems and Smart Grids. Currently preparing for the FE exam (aiming for EIT by May 2026).
+      Interests include power electronics, protection, smart grid technologies, and sustainability-aligned solutions.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Education</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-xl font-bold">George Mason University — Fairfax, VA</h3>
+        <p class="mt-1 font-semibold">Master of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Jan 2025 – Expected May 2026</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>FE exam prep — target EIT by May 2026</li>
+          <li>Coursework: Power System Design, Power System Protection, Power Electronics</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-xl font-bold">George Mason University — Fairfax, VA</h3>
+        <p class="mt-1 font-semibold">Pre-Master of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Jan 2024 – Dec 2024</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Coursework: Linear System Control</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10 md:col-span-2">
+        <h3 class="text-primary text-xl font-bold">Khon Kaen University — Khon Kaen, Thailand</h3>
+        <p class="mt-1 font-semibold">Bachelor of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Aug 2018 – Jul 2022</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Coursework: Electric Power System, Control Systems, Electrical System Design</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Projects</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">Digital Certificate Management in Smart Grids</h3>
+        <p class="text-sm opacity-80">George Mason University — Jan 2025 – May 2025 • Fairfax, VA</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Reviewed CRL, OCSP, Bloom Filter, and FONICA for latency, storage, scalability.</li>
+          <li>Found FONICA achieves ~0 ms latency for 90% of verifications with lowest storage.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">IoT-Based Air Quality Monitoring System</h3>
+        <p class="text-sm opacity-80">George Mason University — Aug 2024 – Dec 2024 • Fairfax, VA</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Surveyed embedded IoT approaches for PM and gas monitoring (Chiang Mai, Thailand).</li>
+          <li>Noted PM2.5 peak 187.60 μg/m³ (2021), ~12.5× above 15 μg/m³ guideline → urgency for real-time monitoring.</li>
+          <li>Proposed low-cost, scalable, energy-efficient concept for community health.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Experience</h2>
+    <div class="mt-6 grid gap-6">
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">B.S.E. Electronics Co., Ltd. — Cooperative Education</h3>
+        <p class="text-sm opacity-80">Bangkok, Thailand • Jul 2021 – Nov 2021</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Designed & tested microcontroller-based circuits for real-time monitoring and visualization.</li>
+          <li>Programmed Arduino + Unity for synchronized physical-virtual data representation.</li>
+          <li>Built 3D electrical system models for building design visualization.</li>
+          <li>Achieved ~85% alignment between physical circuits and virtual response.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">Additional Experience</h3>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Fitness Attendant — Mason Recreation (Present)</li>
+          <li>Baker — Lapin Patisserie (2023)</li>
+          <li>Crew Member — McDonald’s (2022)</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">Professional Involvement</h3>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>IEEE PES Member — active in the power & energy community.</li>
+          <li>Public Presentations — INTO Mason Graduate Colloquium.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Skills</h2>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-xl border border-black/10 p-4 dark:border-white/10">
+        <h4 class="font-semibold">Programming & Tools</h4>
+        <p class="mt-2 text-sm opacity-90">AutoCAD, Revit, MATLAB/Simulink, Arduino, Python, Blender (3D Modeling), Microsoft Office</p>
+      </div>
+      <div class="rounded-xl border border-black/10 p-4 dark:border-white/10">
+        <h4 class="font-semibold">Professional Skills</h4>
+        <p class="mt-2 text-sm opacity-90">Communication, Documentation, Teamwork, Multitasking</p>
+      </div>
+      <div class="rounded-xl border border-black/10 p-4 dark:border-white/10">
+        <h4 class="font-semibold">Languages</h4>
+        <p class="mt-2 text-sm opacity-90">English (fluent), Thai (native)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Campus & Volunteer Activities</h2>
+    <div class="mt-6 grid gap-6">
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">Table Tennis Club — Khon Kaen University</h3>
+        <p class="text-sm opacity-80">Member & Competitor • Aug 2018 – Jul 2022</p>
+        <p class="mt-2 text-sm opacity-90">Competed in inter-faculty and university tournaments; practiced regularly on team squads; built teamwork, focus under pressure, and time management.</p>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-lg font-bold">Community Volunteering</h3>
+        <p class="text-sm opacity-80">Nov 2018</p>
+        <p class="mt-2 text-sm opacity-90">Supported student welfare initiatives, including providing food and minor repairs for school facilities in remote areas.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <div class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+      <h2 class="text-2xl font-black tracking-tight">Contact</h2>
+      <p class="mt-3 text-sm opacity-90">I’m open to internships, co-ops, and entry-level roles in power systems, protection, and smart grids.</p>
+      <div class="mt-4 flex flex-wrap gap-3 text-sm">
+        <a href="mailto:suwisa.aitha@gmail.com" class="rounded-xl bg-primary px-4 py-2 font-bold text-white hover:bg-primary/90">Email Me</a>
+        <a href="https://www.linkedin.com/in/suwisa-aitha/" target="_blank" rel="noopener" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">LinkedIn</a>
+        <a href="Suwisa_Aitha_Resume.pdf" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-16 border-t border-black/5 py-6 text-center text-xs opacity-70 dark:border-white/10">
+    © <span id="y"></span> Suwisa Aitha. All rights reserved.
+  </footer>
+
+  <script>
+    // Year + Theme toggle
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    // Persist theme between visits
+    if (localStorage.theme === "dark") root.classList.add("dark");
+    btn.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.theme = root.classList.contains("dark") ? "dark" : "light";
+    });
+  </script>
+</body>
+</html>
