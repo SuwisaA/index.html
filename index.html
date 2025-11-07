@@ -3,114 +3,206 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suwisa Aitha — Portfolio</title>
+  <title>Suwisa Aitha</title>
+  <meta name="description" content="Resume of Suwisa Aitha — M.S. Electrical Engineering (Power Systems & Smart Grids)." />
+  <meta property="og:title" content="Suwisa Aitha — Resume" />
+  <meta property="og:description" content="M.S. Electrical Engineering (Power Systems & Smart Grids)." />
+  <meta name="theme-color" content="#0ea5e9" />
 
-  <!-- Tailwind via CDN (ok on GitHub Pages) -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#1628a0",
-            "background-light": "#f6f6f8",
-            "background-dark": "#111321",
-          },
-          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"] },
-          borderRadius: { xl: "0.75rem", "2xl": "1rem" },
-          boxShadow: { soft: "0 6px 24px rgba(0,0,0,.08)" }
-        }
-      }
-    };
-  </script>
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+    :root { --ink:#0f172a; --muted:#475569; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); }
+    /* Print-friendly resume */
+    @media print {
+      nav, .no-print { display:none !important; }
+      .page { box-shadow:none !important; }
+      body { background:white; }
+      a { color:inherit; text-decoration:none; }
+      section { break-inside: avoid; }
+    }
+    /* Small embellishments */
+    .chip { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ring-1 ring-slate-300; }
   </style>
 </head>
-
-<body class="bg-background-light text-[#111618] dark:bg-background-dark dark:text-white">
-  <!-- Sticky Navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30 border-b border-black/5 dark:border-white/10">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="flex h-14 items-center justify-between">
-        <a href="#home" class="font-black tracking-tight">Suwisa Aitha</a>
-        <nav class="hidden gap-8 md:flex text-sm font-semibold">
-          <a href="#about" class="hover:text-primary">About</a>
-          <a href="#education" class="hover:text-primary">Education</a>
-          <a href="#projects" class="hover:text-primary">Projects</a>
-          <a href="#experience" class="hover:text-primary">Experience</a>
-          <a href="#skills" class="hover:text-primary">Skills</a>
-          <a href="#contact" class="hover:text-primary">Contact</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <a href="Suwisa_Aitha_Resume.pdf" class="hidden sm:inline-flex rounded-xl bg-primary px-4 py-2 text-white text-sm font-bold hover:bg-primary/90" download>
-            Download Resume
-          </a>
-          <button id="themeToggle" class="rounded-xl border border-black/10 dark:border-white/10 px-3 py-2 text-sm">
-            Toggle Theme
-          </button>
-        </div>
+<body class="bg-slate-50">
+  <!-- Sticky Header -->
+  <nav class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
+    <div class="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight">Suwisa Aitha</a>
+      <div class="hidden sm:flex gap-6 text-sm">
+        <a href="#summary" class="hover:text-sky-700">Summary</a>
+        <a href="#education" class="hover:text-sky-700">Education</a>
+        <a href="#experience" class="hover:text-sky-700">Experience</a>
+        <a href="#projects" class="hover:text-sky-700">Projects</a>
+        <a href="#skills" class="hover:text-sky-700">Skills</a>
+        <a href="#involvement" class="hover:text-sky-700">Involvement</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="window.print()" class="no-print inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-white/60">Print / Save PDF</button>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- ✅ Minimal Hero (guaranteed to display) -->
-  <main class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div id="home" class="grid items-center gap-8 py-12 md:grid-cols-[280px,1fr] md:py-16">
-      <div class="flex items-start justify-center md:justify-start">
-        <img src="images/SW.jpg" alt="Portrait of Suwisa Aitha"
-             class="h-[280px] w-[280px] rounded-2xl object-cover shadow-soft ring-1 ring-black/5 dark:ring-white/10">
-      </div>
-      <div class="flex flex-col justify-center">
-        <h1 class="text-5xl sm:text-6xl font-black leading-tight tracking-tight">
-          Suwisa Aitha
-        </h1>
-        <p class="mt-2 text-base leading-relaxed text-black/70 dark:text-white/80">
-          Electrical Engineering (M.S.) — Power Systems &amp; Smart Grids
-        </p>
-        <p class="mt-4 text-base leading-relaxed text-black/70 dark:text-white/80">
-          Passionate about integrating technical innovation with sustainability to deliver solutions that support the environment.
-          Strong foundation in power system analysis &amp; design, protection, and research. Experienced with IoT-based embedded systems and cross-disciplinary collaboration. Open to relocate.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3 text-sm">
-          <a href="mailto:suwisa.aitha@gmail.com" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">suwisa.aitha@gmail.com</a>
-          <a href="tel:+17032869602" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">(703) 286-9602</a>
-          <a href="https://www.linkedin.com/in/suwisa-aitha/" target="_blank" rel="noopener" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">LinkedIn</a>
-          <span class="rounded-xl border border-black/10 px-4 py-2 dark:border-white/15">Annandale, VA</span>
+  <!-- Page -->
+  <main id="top" class="mx-auto max-w-4xl px-4">
+    <!-- Header / Contact -->
+    <header class="page -mt-px bg-white shadow-sm ring-1 ring-slate-200 rounded-2xl mt-6 mb-6">
+      <div class="p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Suwisa Aitha</h1>
+            <p class="mt-2 text-slate-600">M.S. Electrical Engineering — Power Systems & Smart Grids (in progress)</p>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1">
+            <li><span class="font-medium">Annandale, VA</span></li>
+            <li><a class="hover:underline" href="mailto:suwisa.aitha@gmail.com">suwisa.aitha@gmail.com</a></li>
+            <li><a class="hover:underline" href="tel:+17032869602">(703) 286-9602</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/suwisa-aitha">LinkedIn</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- Simple About to prove content flows -->
-    <section id="about" class="py-8 md:py-12">
-      <h2 class="text-2xl font-black tracking-tight">Summary</h2>
-      <p class="mt-4 leading-relaxed text-black/70 dark:text-white/80">
-        M.S. student in Electrical Engineering with a concentration in Power Systems &amp; Smart Grids. Preparing for the FE (EIT by May 2026).
-      </p>
+    <!-- Summary -->
+    <section id="summary" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Summary</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 leading-relaxed text-slate-700">
+        <p>
+          M.S. student in Electrical Engineering with a concentration in Power Systems and Smart Grids (in progress). Passionate about integrating technical innovation with sustainability to deliver solutions that support environment. Possesses a strong foundation in electrical engineering design, power system analysis and proven research skills. Experienced in IoT-based embedded systems and collaborating cross-disciplinary. Open to relocate.
+        </p>
+      </div>
     </section>
+
+    <!-- Education -->
+    <section id="education" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Education</h2>
+      <div class="grid gap-4">
+        <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">George Mason University</h3>
+              <p class="text-sm text-slate-600">Fairfax, VA</p>
+            </div>
+            <div class="text-sm text-slate-600 whitespace-nowrap">Jan 2025 – Expected May 2026</div>
+          </div>
+          <p class="mt-2 text-slate-700">M.S. in Electrical Engineering</p>
+          <p class="mt-2 text-sm text-slate-700"><span class="font-medium">Relevant Coursework:</span> Power System Design, Power System Protection, Power Electronics</p>
+        </article>
+        <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold">Khon Kaen University</h3>
+              <p class="text-sm text-slate-600">Khon Kaen, Thailand</p>
+            </div>
+            <div class="text-sm text-slate-600 whitespace-nowrap">Aug 2018 – Jul 2022</div>
+          </div>
+          <p class="mt-2 text-slate-700">B.S. in Electrical Engineering</p>
+          <p class="mt-2 text-sm text-slate-700"><span class="font-medium">Relevant Coursework:</span> Electrical System Design, Electric Power Systems, Control Systems, Electrical Engineering Laboratory I–III</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Experience</h2>
+      <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-medium">B.S.E. Electronics Co., Ltd. — Cooperative Education Intern</h3>
+            <p class="text-sm text-slate-600">Electrical Design and Visualization • Bangkok, Thailand</p>
+          </div>
+          <div class="text-sm text-slate-600 whitespace-nowrap">Jul 2021 – Nov 2021</div>
+        </div>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-slate-700">
+          <li>Designed and tested ESP32 microcontroller circuits for real-time electrical data monitoring.</li>
+          <li>Programmed Arduino and Unity to synchronize physical and virtual 3D system models, improving visualization efficiency by ~30% over 2D layouts.</li>
+          <li>Created 3D electrical layout prototypes that improved coordination with design teams.</li>
+          <li>Achieved ~87% alignment between physical and digital models, confirming system accuracy and reliability.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Academic Projects -->
+    <section id="projects" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Academic Projects</h2>
+      <div class="grid gap-4">
+        <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-medium">Digital Certificate Management in Smart Grids</h3>
+            <div class="text-sm text-slate-600">George Mason University</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-slate-700">
+            <li>Analyzed performance of certificate management systems (CRL, OCSP, Bloom Filter, FONICA) in power communication networks.</li>
+            <li>Identified that the FONICA model achieved 0 ms latency for 90% of verifications and minimized storage demand.</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="font-medium">IoT-Based Air Quality Monitoring System</h3>
+            <div class="text-sm text-slate-600">George Mason University</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-slate-700">
+            <li>Reviewed IoT-based embedded systems for PM2.5 and gas detection in Chiang Mai, Thailand.</li>
+            <li>Found PM2.5 levels peaked at 187.6 µg/m³ in 2021, exceeding WHO limits (15 µg/m³) by over 12×, showing the need for real-time monitoring.</li>
+            <li>Proposed a low-cost, scalable, and energy-efficient sensor concept that reduced estimated cost by ≈25% and extended battery life to support community health and sustainability.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications & Skills -->
+    <section id="skills" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Certifications & Technical Skills</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+        <h3 class="font-medium">Certifications</h3>
+        <ul class="list-disc pl-5 text-slate-700 mt-2">
+          <li>FE Exam in Progress — Target EIT Certification by May 2026</li>
+        </ul>
+        <h3 class="font-medium mt-4">Programming & Tools</h3>
+        <div class="mt-2 flex flex-wrap gap-2 text-slate-700">
+          <span class="chip">Arduino</span>
+          <span class="chip">Python</span>
+          <span class="chip">Blender (3D)</span>
+          <span class="chip">Microsoft Office</span>
+          <span class="chip">AutoCAD</span>
+          <span class="chip">Revit</span>
+          <span class="chip">PowerWorld Simulator</span>
+          <span class="chip">MATLAB/Simulink</span>
+        </div>
+        <h3 class="font-medium mt-4">Professional Skills</h3>
+        <div class="mt-2 flex flex-wrap gap-2 text-slate-700">
+          <span class="chip">Communication</span>
+          <span class="chip">Documentation</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Multitasking</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Involvement -->
+    <section id="involvement" class="mb-16">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Professional Involvement</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+        <ul class="list-disc pl-5 text-slate-700 space-y-1">
+          <li>IEEE PES Member — Active participant in power and energy engineering community.</li>
+          <li>Public Presentations — Presented IoT-based environmental project at INTO Mason Graduate Colloquium.</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="mt-16 border-t border-black/5 py-6 text-center text-xs opacity-70 dark:border-white/10">
-    © <span id="y"></span> Suwisa Aitha. All rights reserved.
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-4xl px-4 py-8 text-center text-sm text-slate-600">
+      © <span id="year"></span> Suwisa Aitha. All rights reserved.
+    </div>
   </footer>
 
   <script>
-    // Year + Theme toggle
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const root = document.documentElement;
-    const btn = document.getElementById("themeToggle");
-    if (localStorage.theme === "dark") root.classList.add("dark");
-    btn.addEventListener("click", () => {
-      root.classList.toggle("dark");
-      localStorage.theme = root.classList.contains("dark") ? "dark" : "light";
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-  <!-- Hero Section -->
-  <section id="home" class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="grid items-center gap-8 py-12 md:grid-cols-[280px,1fr] md:py-16">
-      <div class="flex
