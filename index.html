@@ -233,41 +233,59 @@
   </div>
 </section>
 <!-- Gallery Section -->
-
 <section id="gallery" class="mb-20">
   <h2 class="text-xl font-semibold tracking-tight mb-3">Gallery</h2>
   <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  <!-- 3D Modeling Projects -->
-  <figure class="group overflow-hidden rounded-xl shadow-sm">
-    <img loading="lazy" src="images/50thkku1.png" alt="3D Modeling concept 1" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
-    <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling 1</figcaption>
-  </figure>
+      <!-- 3D Modeling Projects -->
+      <figure class="group overflow-hidden rounded-xl shadow-sm cursor-zoom-in">
+        <img loading="lazy"
+             src="images/50thkku1.png"
+             data-full="images/50thkku1.png"
+             alt="3D Modeling concept 1"
+             class="w-full h-56 object-cover transition duration-300 group-hover:scale-105 js-lightbox" />
+        <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling 1</figcaption>
+      </figure>
 
-  <figure class="group overflow-hidden rounded-xl shadow-sm">
-    <img loading="lazy" src="images/50thkku2.png" alt="3D Modeling concept 2" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
-    <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling 2</figcaption>
-  </figure>
+      <figure class="group overflow-hidden rounded-xl shadow-sm cursor-zoom-in">
+        <img loading="lazy"
+             src="images/50thkku2.png"
+             data-full="images/50thkku2.png"
+             alt="3D Modeling concept 2"
+             class="w-full h-56 object-cover transition duration-300 group-hover:scale-105 js-lightbox" />
+        <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling2</figcaption>
+      </figure>
 
-  <figure class="group overflow-hidden rounded-xl shadow-sm">
-    <img loading="lazy" src="images/50thkku3.png" alt="3D Modeling concept 3" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
-    <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling 3</figcaption>
-  </figure>
+      <figure class="group overflow-hidden rounded-xl shadow-sm cursor-zoom-in">
+        <img loading="lazy"
+             src="images/50thkku3.png"
+             data-full="images/50thkku3.png"
+             alt="3D Modeling concept 3"
+             class="w-full h-56 object-cover transition duration-300 group-hover:scale-105 js-lightbox" />
+        <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling3</figcaption>
+      </figure>
 
-  <figure class="group overflow-hidden rounded-xl shadow-sm">
-    <img loading="lazy" src="images/50thkku4.png" alt="3D Modeling concept 4" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
-    <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling 4</figcaption>
-  </figure>
+      <figure class="group overflow-hidden rounded-xl shadow-sm cursor-zoom-in">
+        <img loading="lazy"
+             src="images/50thkku4.png"
+             data-full="images/50thkku4.png"
+             alt="3D Modeling concept 4"
+             class="w-full h-56 object-cover transition duration-300 group-hover:scale-105 js-lightbox" />
+        <figcaption class="text-sm text-slate-700 mt-2 text-center">3D Modeling4</figcaption>
+      </figure>
 
-  <!-- Field Visit -->
-  <figure class="group overflow-hidden rounded-xl shadow-sm">
-    <img loading="lazy" src="images/f83ebd1b-e511-4b18-bbca-7a0e87603386.jpeg" alt="Field visit — substation & equipment" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
-    <figcaption class="text-sm text-slate-700 mt-2 text-center">Field Visit — Dominion Energy Substation</figcaption>
-  </figure>
+      <!-- Field Visit -->
+      <figure class="group overflow-hidden rounded-xl shadow-sm cursor-zoom-in">
+        <img loading="lazy"
+             src="images/f83ebd1b-e511-4b18-bbca-7a0e87603386.jpeg"
+             data-full="images/f83ebd1b-e511-4b18-bbca-7a0e87603386.jpeg"
+             alt="Field visit — substation & equipment"
+             class="w-full h-56 object-cover transition duration-300 group-hover:scale-105 js-lightbox" />
+        <figcaption class="text-sm text-slate-700 mt-2 text-center">Touching 500kv 2 phases @ Dominion Energy substation</figcaption>
+      </figure>
 
-</div>
-
+    </div>
   </div>
 </section>
   </main>
@@ -277,7 +295,57 @@
       © <span id="year"></span> Suwisa Aitha.
     </div>
   </footer>
+  
+<!-- Lightbox Modal -->
+<div id="lightbox"
+     class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 md:p-8"
+     aria-hidden="true">
+  <button id="lightboxClose"
+          class="absolute top-4 right-4 md:top-6 md:right-6 text-white text-xl md:text-2xl"
+          aria-label="Close">✕</button>
+  <img id="lightboxImg"
+       alt=""
+       class="mx-auto max-h-[85vh] w-auto rounded-xl shadow-2xl object-contain" />
+</div>
 
+<script>
+  (function () {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbClose = document.getElementById('lightboxClose');
+
+    function open(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lb.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.add('hidden');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Open on click (any element with class 'js-lightbox')
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('.js-lightbox');
+      if (img) {
+        const full = img.getAttribute('data-full') || img.src;
+        open(full, img.alt);
+      }
+    });
+
+    // Close on overlay click or button
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb || e.target === lbClose) close();
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lb.classList.contains('hidden')) close();
+    });
+  })();
+</script>
 </body>
 </html>
 
