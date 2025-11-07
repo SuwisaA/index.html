@@ -19,7 +19,7 @@
             "background-light": "#f6f6f8",
             "background-dark": "#111321",
           },
-          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"] },
           borderRadius: { xl: "0.75rem", "2xl": "1rem" },
           boxShadow: { soft: "0 6px 24px rgba(0,0,0,.08)" }
         }
@@ -27,9 +27,7 @@
     };
   </script>
   <style>
-    body {
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
+    body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
   </style>
 </head>
 
@@ -58,6 +56,119 @@
       </div>
     </div>
   </header>
+
+  <!-- HERO (this was missing/placed wrong before) -->
+  <section id="home" class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid items-center gap-8 py-12 md:grid-cols-[280px,1fr] md:py-16">
+      <!-- Photo -->
+      <div class="flex items-start justify-center md:justify-start">
+        <!-- Change to images/me.jpg if that's your file -->
+        <img src="images/SW.jpg" alt="Portrait of Suwisa Aitha"
+             class="h-[280px] w-[280px] rounded-2xl object-cover shadow-soft ring-1 ring-black/5 dark:ring-white/10">
+      </div>
+
+      <!-- Text -->
+      <div class="flex flex-col justify-center">
+        <!-- BIGGEST: your name -->
+        <h1 class="text-5xl sm:text-6xl font-black leading-tight tracking-tight">
+          Suwisa Aitha
+        </h1>
+
+        <!-- Degree line: same size as description -->
+        <p class="mt-2 text-base leading-relaxed text-black/70 dark:text-white/80">
+          Electrical Engineering (M.S.) — Power Systems &amp; Smart Grids
+        </p>
+
+        <!-- Description -->
+        <p class="mt-4 text-base leading-relaxed text-black/70 dark:text-white/80">
+          Passionate about integrating technical innovation with sustainability to deliver solutions that support the environment.
+          Strong foundation in power system analysis &amp; design, protection, and research. Experienced with IoT-based embedded systems and cross-disciplinary collaboration. Open to relocate.
+        </p>
+
+        <!-- Contact pills -->
+        <div class="mt-6 flex flex-wrap gap-3 text-sm">
+          <a href="mailto:suwisa.aitha@gmail.com" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">suwisa.aitha@gmail.com</a>
+          <a href="tel:+17032869602" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">(703) 286-9602</a>
+          <a href="https://www.linkedin.com/in/suwisa-aitha/" target="_blank" rel="noopener" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">LinkedIn</a>
+          <span class="rounded-xl border border-black/10 px-4 py-2 dark:border-white/15">Annandale, VA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Summary</h2>
+    <p class="mt-4 leading-relaxed text-black/70 dark:text-white/80">
+      M.S. student in Electrical Engineering (in progress) with a concentration in Power Systems and Smart Grids. Currently preparing for the FE exam (aiming for EIT by May 2026).
+      Interests include power electronics, protection, smart grid technologies, and sustainability-aligned solutions.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <h2 class="text-2xl font-black tracking-tight">Education</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-xl font-bold">George Mason University — Fairfax, VA</h3>
+        <p class="mt-1 font-semibold">Master of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Jan 2025 – Expected May 2026</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>FE exam prep — target EIT by May 2026</li>
+          <li>Coursework: Power System Design, Power System Protection, Power Electronics</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+        <h3 class="text-primary text-xl font-bold">George Mason University — Fairfax, VA</h3>
+        <p class="mt-1 font-semibold">Pre-Master of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Jan 2024 – Dec 2024</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Coursework: Linear System Control</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10 md:col-span-2">
+        <h3 class="text-primary text-xl font-bold">Khon Kaen University — Khon Kaen, Thailand</h3>
+        <p class="mt-1 font-semibold">Bachelor of Electrical Engineering</p>
+        <p class="text-sm opacity-80">Aug 2018 – Jul 2022</p>
+        <ul class="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
+          <li>Coursework: Electric Power System, Control Systems, Electrical System Design</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 sm:px-6 py-8 md:py-12">
+    <div class="rounded-2xl bg-white shadow-soft ring-1 ring-black/5 p-6 dark:bg-white/5 dark:ring-white/10">
+      <h2 class="text-2xl font-black tracking-tight">Contact</h2>
+      <p class="mt-3 text-sm opacity-90">I’m open to internships, co-ops, and entry-level roles in power systems, protection, and smart grids.</p>
+      <div class="mt-4 flex flex-wrap gap-3 text-sm">
+        <a href="mailto:suwisa.aitha@gmail.com" class="rounded-xl bg-primary px-4 py-2 font-bold text-white hover:bg-primary/90">Email Me</a>
+        <a href="https://www.linkedin.com/in/suwisa-aitha/" target="_blank" rel="noopener" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10">LinkedIn</a>
+        <a href="Suwisa_Aitha_Resume.pdf" class="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-16 border-t border-black/5 py-6 text-center text-xs opacity-70 dark:border-white/10">
+    © <span id="y"></span> Suwisa Aitha. All rights reserved.
+  </footer>
+
+  <script>
+    // Year + Theme toggle
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    if (localStorage.theme === "dark") root.classList.add("dark");
+    btn.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.theme = root.classList.contains("dark") ? "dark" : "light";
+    });
+  </script>
+</body>
+</html>
 
   <!-- Hero Section -->
   <section id="home" class="mx-auto max-w-6xl px-4 sm:px-6">
