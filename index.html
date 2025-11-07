@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suwisa Aitha</title>
+  <title>Suwisa Aitha — Resume</title>
   <meta name="description" content="Resume of Suwisa Aitha — M.S. Electrical Engineering (Power Systems & Smart Grids)." />
   <meta property="og:title" content="Suwisa Aitha — Resume" />
   <meta property="og:description" content="M.S. Electrical Engineering (Power Systems & Smart Grids)." />
   <meta name="theme-color" content="#0ea5e9" />
 
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root { --ink:#0f172a; --muted:#475569; }
-    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--ink); }
-    /* Print-friendly resume */
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji; color:var(--ink); }
     @media print {
       nav, .no-print { display:none !important; }
       .page { box-shadow:none !important; }
@@ -23,12 +21,10 @@
       a { color:inherit; text-decoration:none; }
       section { break-inside: avoid; }
     }
-    /* Small embellishments */
     .chip { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ring-1 ring-slate-300; }
   </style>
 </head>
 <body class="bg-slate-50">
-  <!-- Sticky Header -->
   <nav class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
     <div class="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
       <a href="#top" class="font-semibold tracking-tight">Suwisa Aitha</a>
@@ -36,19 +32,16 @@
         <a href="#summary" class="hover:text-sky-700">Summary</a>
         <a href="#education" class="hover:text-sky-700">Education</a>
         <a href="#experience" class="hover:text-sky-700">Experience</a>
+        <a href="#additional-experience" class="hover:text-sky-700">Additional Experience</a>
         <a href="#projects" class="hover:text-sky-700">Projects</a>
         <a href="#skills" class="hover:text-sky-700">Skills</a>
         <a href="#involvement" class="hover:text-sky-700">Involvement</a>
       </div>
-      <div class="flex items-center gap-2">
-        <button onclick="window.print()" class="no-print inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-white/60">Print / Save PDF</button>
-      </div>
+      <button onclick="window.print()" class="no-print inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-white/60">Print / Save PDF</button>
     </div>
   </nav>
 
-  <!-- Page -->
   <main id="top" class="mx-auto max-w-4xl px-4">
-    <!-- Header / Contact -->
     <header class="page -mt-px bg-white shadow-sm ring-1 ring-slate-200 rounded-2xl mt-6 mb-6">
       <div class="p-6 md:p-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -66,17 +59,13 @@
       </div>
     </header>
 
-    <!-- Summary -->
     <section id="summary" class="mb-8">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Summary</h2>
       <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 leading-relaxed text-slate-700">
-        <p>
-          M.S. student in Electrical Engineering with a concentration in Power Systems and Smart Grids (in progress). Passionate about integrating technical innovation with sustainability to deliver solutions that support environment. Possesses a strong foundation in electrical engineering design, power system analysis and proven research skills. Experienced in IoT-based embedded systems and collaborating cross-disciplinary. Open to relocate.
-        </p>
+        <p>M.S. student in Electrical Engineering with a concentration in Power Systems and Smart Grids (in progress). Passionate about integrating technical innovation with sustainability to deliver solutions that support environment. Possesses a strong foundation in electrical engineering design, power system analysis and proven research skills. Experienced in IoT-based embedded systems and collaborating cross-disciplinary. Open to relocate.</p>
       </div>
     </section>
 
-    <!-- Education -->
     <section id="education" class="mb-8">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Education</h2>
       <div class="grid gap-4">
@@ -105,7 +94,6 @@
       </div>
     </section>
 
-    <!-- Experience -->
     <section id="experience" class="mb-8">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Experience</h2>
       <article class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
@@ -125,7 +113,17 @@
       </article>
     </section>
 
-    <!-- Academic Projects -->
+    <section id="additional-experience" class="mb-8">
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Additional Experience</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+        <ul class="list-disc pl-5 text-slate-700 space-y-1">
+          <li><span class="font-medium">Fitness Attendant</span>: Mason Recreation (Present)</li>
+          <li><span class="font-medium">Baker</span>: Lapin Patisserie (2023)</li>
+          <li><span class="font-medium">Crew Member</span>: McDonald's (2022)</li>
+        </ul>
+      </div>
+    </section>
+
     <section id="projects" class="mb-8">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Academic Projects</h2>
       <div class="grid gap-4">
@@ -153,7 +151,6 @@
       </div>
     </section>
 
-    <!-- Certifications & Skills -->
     <section id="skills" class="mb-8">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Certifications & Technical Skills</h2>
       <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
@@ -182,17 +179,39 @@
       </div>
     </section>
 
-    <!-- Involvement -->
     <section id="involvement" class="mb-16">
       <h2 class="text-xl font-semibold tracking-tight mb-3">Professional Involvement</h2>
-      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 mb-8">
         <ul class="list-disc pl-5 text-slate-700 space-y-1">
           <li>IEEE PES Member — Active participant in power and energy engineering community.</li>
           <li>Public Presentations — Presented IoT-based environmental project at INTO Mason Graduate Colloquium.</li>
         </ul>
       </div>
-    </section>
 
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Personal Interests</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6 mb-8">
+        <ul class="list-disc pl-5 text-slate-700 space-y-1">
+          <li><span class="font-medium">3D Modeling</span>: Designed a unique building style and created 3D car models.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-xl font-semibold tracking-tight mb-3">Campus & Volunteer Activities</h2>
+      <div class="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
+        <ul class="list-disc pl-5 text-slate-700 space-y-1">
+          <li><span class="font-medium">Table Tennis Club – Khon Kaen University</span> | Member & Competitor | Aug 2018 – Jul 2022
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+              <li>Competed in inter-faculty and university tournaments; practiced regularly on team squads.</li>
+              <li>Developed teamwork, focus under pressure, and time management while balancing academic workload.</li>
+            </ul>
+          </li>
+          <li><span class="font-medium">Community Volunteering</span> | Nov 2018
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+              <li>Supported student welfare initiatives, including providing food and minor repairs for school facilities in remote areas.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t border-slate-200 bg-white">
@@ -202,6 +221,11 @@
   </footer>
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
